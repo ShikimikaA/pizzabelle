@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; 
+    color: #333;
+}
+
+nav {
+    background-color: #a25932e7;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav img {
+    height: 50px; 
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ffeb3b; 
+    text-decoration: underline;
+}
+
+nav .dropdown {
+    cursor: pointer;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: #ff6347; 
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ff6347; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0; 
+}
+
+h1, h2 {
+    margin: 20px 0;
+    color: #ff6347; ; 
+    text-align: center;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="file"],
+form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+    
+}
+
+form input:focus,
+form select:focus {
+    border-color: #ff6347; 
+    outline: none;
+}
+
+button {
+    background-color: #ff6347; 
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500; 
+}
+
+.inventory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inventory-item {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px;
+    width: calc(15% - 10px); 
+    text-align: center; 
+    margin: 10px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.inventory-item:hover {
+    transform: scale(1.05); 
+}
+
+.inventory-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.available-food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.available-food-item {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px;
+    width: calc(23% - 10px); 
+    text-align: center; 
+    margin: 10px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.available-food-item:hover {
+    transform: scale(1.05); 
+}
+
+.available-food-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        background-color: #ff6347; 
+        margin-top: 0.5rem; 
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex; 
+    }
+
+    .navbar-toggle.active .bar {
+        transform: rotate(45deg);
+        margin: 0; 
+    }
+
+    .inventory-item {
+        width: calc(45% - 20px); 
+    }
+
+    .available-food-item {
+        width: calc(45% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .inventory-item,
+    .available-food-item {
+        width: calc(100% - 20px); 
+    }
+
+    .btn-red {
+        font-size: 0.9rem; 
+        padding: 0.5rem 1rem; 
+    }
+}

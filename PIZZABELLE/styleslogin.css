@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.header {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header img {
+    height: 35px;
+}
+
+.auth-links a {
+    color: #9a0b09;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.main-content {
+    text-align: center;
+    position: relative;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-box {
+    position: absolute;
+    top: 175px; 
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    margin-bottom: 15px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+    background-color: #9a0b09;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form .register-text {
+    margin-top: 10px;
+}
+
+.login-form .register-text a {
+    color: #9a0b09;
+    text-decoration: underline;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    margin: 180px 0; 
+}
+
+.image-grid a {
+    margin: 0 10px;
+}
+
+.image-grid img {
+    width: 450px; 
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    box-shadow: 0 10px 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.view-deals {
+    margin: -150px 0; 
+}
+
+.view-deals a {
+    background-color: #9a0b09;
+    color: white;
+    padding: 15px 420px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.view-deals a:hover {
+    background-color: #a50e0e;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
